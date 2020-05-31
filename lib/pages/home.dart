@@ -18,11 +18,16 @@ class _HomeState extends State<Home> {
           child: Column(
             children: [
               FlatButton.icon(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/location');
-                  },
-                  icon: Icon(Icons.edit_location),
-                  label: Text('Edit location')),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/location');
+                },
+                icon: Icon(
+                  Icons.edit_location,
+                  color: Colors.blueAccent[700],
+                ),
+                label: Text('Edit location'),
+                textColor: Colors.blueAccent[700],
+              ),
               SizedBox(
                 height: 20.0,
               ),
@@ -32,6 +37,7 @@ class _HomeState extends State<Home> {
                   Text(
                     data['location'],
                     style: TextStyle(
+                      color: Colors.blueAccent[700],
                       fontSize: 28.0,
                       letterSpacing: 2.0,
                     ),
@@ -43,7 +49,10 @@ class _HomeState extends State<Home> {
               ),
               Text(
                 data['time'],
-                style: TextStyle(fontSize: 66.0),
+                style: TextStyle(
+                  fontSize: 66.0,
+                  color: Colors.blueAccent[700],
+                ),
               ),
             ],
           ),
